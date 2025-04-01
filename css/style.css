@@ -89,11 +89,35 @@ header{
 
 
 
-.nav-item>a{
+.nav-item a{
     text-decoration: none;
     color: white;
     font-size: 1.2rem;
+    position: relative;
 }
+
+.nav-item>a:hover{
+    color: var(--green);
+    /* width: 100%; */
+
+}
+
+nav>.nav-item a::before{
+    content: ' ';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: var(--green);
+    transition: all .3s;
+}
+
+
+nav>.nav-item a:hover::before{
+    width: 100%;
+}
+
 
 /* Home Section */
 
